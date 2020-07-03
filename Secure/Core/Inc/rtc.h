@@ -16,6 +16,7 @@
   *
   ******************************************************************************
   */
+// clang-format off
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __rtc_H
 #define __rtc_H
@@ -27,7 +28,7 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 extern RTC_HandleTypeDef hrtc;
@@ -39,7 +40,8 @@ extern RTC_HandleTypeDef hrtc;
 void MX_RTC_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
+bool rtc_get_date(RTC_DateTypeDef * p_date);
+bool rtc_get_time(RTC_TimeTypeDef * p_time);
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
